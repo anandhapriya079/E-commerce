@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Cart</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEasy
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                🛒 Cart
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Cart Section -->
+
+    <section class="cart-section">
+
+        <h1>
+            Shopping Cart
+        </h1>
+
+
+        <div id="cart-items">
+        </div>
+
+
+        <!-- Order Summary -->
+
+        <div class="cart-summary">
+
+    <h2>
+        Order Summary
+    </h2>
+
+    <div class="summary-row">
+
+        <span>
+            Subtotal
+        </span>
+
+        <span>
+            ₹<span id="subtotal">0</span>
+        </span>
+
+    </div>
+
+
+    <div class="summary-row">
+
+        <span>
+            Delivery
+        </span>
+
+        <span>
+            ₹<span id="delivery">50</span>
+        </span>
+
+    </div>
+
+
+    <hr>
+
+
+    <div class="summary-total">
+
+        <span>
+            Total
+        </span>
+
+        <span>
+            ₹<span id="total">0</span>
+        </span>
+
+    </div>
+
+
+    <button
+        class="checkout-button"
+        onclick="goToCheckout()">
+
+        Proceed to Checkout
+
+    </button>
+
+
+    <button
+        class="continue-shopping"
+        onclick="window.location.href='products.html'">
+
+        Continue Shopping
+
+    </button>
+
+    </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 ShopEasy.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

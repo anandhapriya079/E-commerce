@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Checkout</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body onload="checkLogin()">
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEasy
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                🛒 Cart
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Checkout -->
+
+    <section class="checkout-section">
+
+        <h1>
+            Checkout
+        </h1>
+
+        <div class="checkout-container">
+
+
+            <!-- Customer Details -->
+
+            <div class="checkout-form">
+
+                <h2>
+                    Customer Details
+                </h2>
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                >
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="Enter your email"
+                >
+
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter phone number"
+                >
+
+
+                <label>
+                    Address
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    placeholder="Enter your address">
+                </textarea>
+
+
+                <label>
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="customerCity"
+                    placeholder="Enter city"
+                >
+
+
+                <label>
+                    Pincode
+                </label>
+
+                <input
+                    type="text"
+                    id="customerPincode"
+                    placeholder="Enter pincode"
+                >
+
+
+                <h2>
+                    Payment Method
+                </h2>
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="COD"
+                        checked
+                    >
+
+                    Cash on Delivery
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="UPI"
+                    >
+
+                    UPI
+
+                </label>
+
+
+                <button
+                    class="place-order-button"
+                    onclick="placeOrder()">
+
+                    Place Order
+
+                </button>
+
+            </div>
+
+
+            <!-- Order Summary -->
+
+            <div class="checkout-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+                <div id="checkout-items">
+                </div>
+
+                <hr>
+
+                <p>
+                    Subtotal:
+                    ₹<span id="checkout-subtotal">0</span>
+                </p>
+
+                <p>
+                    Delivery:
+                    ₹50
+                </p>
+
+                <h2>
+                    Total:
+                    ₹<span id="checkout-total">0</span>
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 ShopEasy.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

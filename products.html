@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Products</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEasy
+        </div>
+
+
+        <div class="search-box">
+             <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products...">
+
+    <button onclick="searchProducts()">
+        🔍
+    </button>
+
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+            <a href="wishlist.html">
+            ❤️ Wishlist
+            </a>
+           <div id="user-status"></div>
+
+            <a href="cart.html">
+                🛒 Cart
+                (<span id="cart-count">0</span>)
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Products Section -->
+
+    <section class="products-section">
+
+        <h1>
+            Our Products
+        </h1>
+
+        <p class="products-subtitle">
+            Find the perfect product for you
+        </p>
+
+
+        <!-- Category Filter -->
+
+        <div class="filter-buttons">
+
+    <button onclick="filterProducts('All')">
+        All
+    </button>
+
+    <button onclick="filterProducts('Electronics')">
+        Electronics
+    </button>
+
+    <button onclick="filterProducts('Fashion')">
+        Fashion
+    </button>
+
+    <button onclick="filterProducts('Footwear')">
+        Footwear
+    </button>
+
+    <button onclick="filterProducts('Home')">
+        Home
+    </button>
+
+</div>
+
+
+        <!-- Products -->
+
+        <div class="product-container">
+
+
+            <!-- Product 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    📱
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3 onclick="openProductDetails('Smart Phone')"
+    style="cursor: pointer;">
+    Smart Phone
+</h3>
+                    <p class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </p>
+
+                    <p class="price">
+                        ₹25,999
+                    </p>
+                    <button class="wishlist-button"
+                    onclick="addToWishlist('Smart Phone')">
+                    ❤️ Wishlist
+                    </button>
+                    <button class="cart-button"
+                        onclick="addToCart('Smart Phone', 25999)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    💻
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3 onclick="openProductDetails('Laptop')"
+                    style="cursor: pointer;">
+                    Laptop
+                    </h3>
+
+                    <p class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </p>
+
+                    <p class="price">
+                        ₹55,999
+                    </p>
+                    <button class="wishlist-button"
+                    onclick="addToWishlist('Laptop')">
+                    ❤️ Wishlist
+                    </button>
+                    <button class="cart-button"
+                        onclick="addToCart('Laptop', 55999)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3 onclick="openProductDetails('Wireless Headphones')"
+    style="cursor: pointer;">
+    Wireless Headphones
+</h3>
+                    <p class="rating">
+                        ⭐⭐⭐⭐
+                    </p>
+
+                    <p class="price">
+                        ₹1,999
+                    </p>
+                    <button class="wishlist-button"
+                    onclick="addToWishlist('Wireless Headphones')">
+                    ❤️ Wishlist
+                    </button>
+                    <button class="cart-button"
+                        onclick="addToCart('Wireless Headphones', 1999)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    👕
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Fashion
+                    </span>
+
+                  <h3 onclick="openProductDetails('Cotton T-Shirt')"
+    style="cursor: pointer;">
+    Cotton T-Shirt
+</h3>
+
+                    <p class="rating">
+                        ⭐⭐⭐⭐
+                    </p>
+
+                    <p class="price">
+                        ₹799
+                    </p>
+                    <button class="wishlist-button"
+                    onclick="addToWishlist('Cotton T-Shirt')">
+                    ❤️ Wishlist
+                    </button>
+
+                    <button class="cart-button"
+                         onclick="addToCart('Cotton T-Shirt', 799)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 5 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    👟
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Footwear
+                    </span>
+
+                    <h3 onclick="openProductDetails('Sports Shoes')"
+    style="cursor: pointer;">
+    Sports Shoes
+</h3>
+                    <p class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </p>
+
+                    <p class="price">
+                        ₹2,499
+                    </p>
+                    <button class="wishlist-button"
+                    onclick="addToWishlist('Sports Shoes')">
+                    ❤️ Wishlist
+                    </button>
+                    <button class="cart-button"
+                         onclick="addToCart('Sports Shoes', 2499)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 6 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    ⌚
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                   <h3 onclick="openProductDetails('Smart Watch')"
+    style="cursor: pointer;">
+    Smart Watch
+</h3>
+
+                    <p class="rating">
+                        ⭐⭐⭐⭐
+                    </p>
+
+                    <p class="price">
+                        ₹3,499
+                    </p>
+                     <button class="wishlist-button"
+                    onclick="addToWishlist('Smart Watch')">
+                    ❤️ Wishlist
+                    </button>
+                    <button class="cart-button"
+                        onclick="addToCart('Smart Watch', 3499)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 ShopEasy.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+     <script src="script.js"></script>
+
+</body>
+
+</html>

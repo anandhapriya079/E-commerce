@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Product Details</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEasy
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                🛒 Cart
+                (<span id="cart-count">0</span>)
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Product Details -->
+
+    <section class="product-details">
+
+    <div class="details-image" id="detailsImage">
+        📱
+    </div>
+
+    <div class="details-info">
+
+        <span class="category" id="detailsCategory">
+            Electronics
+        </span>
+
+        <h1 id="detailsName">
+            Smart Phone
+        </h1>
+
+        <p class="rating">
+            ⭐⭐⭐⭐⭐
+        </p>
+
+        <h2>
+            ₹<span id="detailsPrice">25,999</span>
+        </h2>
+
+        <p class="description" id="detailsDescription">
+            Experience powerful performance
+            with this amazing product.
+        </p>
+
+        <div class="quantity-selector">
+
+            <button onclick="changeDetailsQuantity(-1)">
+                −
+            </button>
+
+            <span id="detailsQuantity">
+                1
+            </span>
+
+            <button onclick="changeDetailsQuantity(1)">
+                +
+            </button>
+
+        </div>
+
+        <button
+            class="cart-button"
+            onclick="addDetailsProductToCart()">
+
+            Add to Cart
+
+        </button>
+
+    </div>
+
+</section>
+
+    <footer>
+
+        <p>
+            © 2026 ShopEasy.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
